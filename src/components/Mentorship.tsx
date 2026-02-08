@@ -83,7 +83,9 @@ export default function Mentorship() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.2 }}
-                                className="bg-white dark:bg-white/5 backdrop-blur-lg border border-gray-100 dark:border-white/10 p-6 rounded-[2rem] flex items-center gap-6 group hover:bg-orange-50/50 dark:hover:bg-white/10 transition-all shadow-sm"
+                                whileHover={{ scale: 1.02, x: -5 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="bg-white dark:bg-white/5 backdrop-blur-lg border border-gray-100 dark:border-white/10 p-6 rounded-[2rem] flex items-center gap-6 group hover:bg-gray-50/50 dark:hover:bg-white/10 transition-all shadow-sm cursor-default"
                             >
                                 <img
                                     src={mentor.image}

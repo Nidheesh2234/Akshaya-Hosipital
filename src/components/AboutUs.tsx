@@ -29,20 +29,28 @@ export default function AboutUs() {
                         </p>
 
                         <div className="grid sm:grid-cols-2 gap-6">
-                            <div className="p-6 bg-orange-50/50 dark:bg-white/5 rounded-2xl border border-orange-100/50 dark:border-white/5">
+                            <motion.div
+                                whileHover={{ scale: 1.02, y: -5 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="p-6 bg-white dark:bg-white/5 rounded-2xl border border-orange-100/50 dark:border-white/5 cursor-default transition-shadow hover:shadow-lg"
+                            >
                                 <div className="text-brand-orange mb-4">
                                     <Heart size={32} />
                                 </div>
                                 <h4 className="font-bold text-lg mb-2 text-brand-teal dark:text-white font-heading">Compassionate Care</h4>
                                 <p className="text-sm text-gray-500">Treating patients as individuals with unique stories and personalized support.</p>
-                            </div>
-                            <div className="p-6 bg-green-50/50 dark:bg-white/5 rounded-2xl border border-green-100/50 dark:border-white/5">
+                            </motion.div>
+                            <motion.div
+                                whileHover={{ scale: 1.02, y: -5 }}
+                                whileTap={{ scale: 0.98 }}
+                                className="p-6 bg-white dark:bg-white/5 rounded-2xl border border-green-100/50 dark:border-white/5 cursor-default transition-shadow hover:shadow-lg"
+                            >
                                 <div className="text-brand-green mb-4">
                                     <Sparkles size={32} />
                                 </div>
                                 <h4 className="font-bold text-lg mb-2 text-brand-teal dark:text-white font-heading">Modern Innovation</h4>
                                 <p className="text-sm text-gray-500">Continuous staff training and adoption of international standards of excellence.</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </motion.div>
 
@@ -71,7 +79,8 @@ export default function AboutUs() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="p-12 rounded-[3rem] bg-brand-orange/5 dark:bg-white/5 border border-brand-orange/20 dark:border-white/10 text-brand-teal dark:text-white"
+                        whileHover={{ y: -10 }}
+                        className="p-12 rounded-[3rem] bg-white dark:bg-white/5 border border-brand-orange/20 dark:border-white/10 text-brand-teal dark:text-white transition-shadow hover:shadow-2xl hover:shadow-orange-500/5"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-brand-orange/10 rounded-2xl text-brand-orange">
@@ -89,7 +98,8 @@ export default function AboutUs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="p-12 rounded-[3rem] bg-brand-green text-white border border-brand-green/20 shadow-xl shadow-green-500/10"
+                        whileHover={{ y: -10 }}
+                        className="p-12 rounded-[3rem] bg-brand-green text-white border border-brand-green/20 shadow-xl shadow-green-500/10 transition-all hover:shadow-green-500/20"
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <div className="p-3 bg-white/10 rounded-2xl">

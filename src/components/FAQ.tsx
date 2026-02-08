@@ -55,7 +55,7 @@ export default function FAQ() {
                         >
                             <button
                                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
-                                className={`w-full text-left p-8 flex justify-between items-center transition-all ${activeIndex === index ? 'bg-orange-50/30 dark:bg-brand-orange/5' : 'bg-white dark:bg-white/[0.02] hover:bg-gray-50 dark:hover:bg-white/[0.05]'}`}
+                                className={`w-full text-left p-8 flex justify-between items-center transition-all ${activeIndex === index ? 'bg-white dark:bg-brand-orange/5' : 'bg-white dark:bg-white/[0.02] hover:bg-gray-50/30 dark:hover:bg-white/[0.05]'}`}
                             >
                                 <span className={`font-bold text-xl font-heading transition-colors ${activeIndex === index ? 'text-brand-orange' : 'text-brand-teal dark:text-white'}`}>{faq.question}</span>
                                 <div className={`shrink-0 ml-4 p-2 rounded-xl transition-all ${activeIndex === index ? 'bg-brand-orange text-white rotate-180' : 'bg-brand-teal/5 dark:bg-white/10 text-brand-teal/40 dark:text-white/40'}`}>

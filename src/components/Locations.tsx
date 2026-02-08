@@ -22,7 +22,7 @@ const locations = [
 
 export default function Locations() {
     return (
-        <section id="locations" className="py-24 bg-white dark:bg-white/[0.02]">
+        <section id="locations" className="py-24 bg-white dark:bg-dark-primary/40">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
                     <motion.h2

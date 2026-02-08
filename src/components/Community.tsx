@@ -71,30 +71,34 @@ export default function Community() {
                                     title: "Free Medical Camps",
                                     description: "Regular health screening camps providing free consultations and basic diagnostics for the local community.",
                                     icon: Tent,
-                                    color: "bg-orange-50 text-brand-orange dark:bg-brand-orange/10 border border-brand-orange/10"
+                                    color: "bg-white dark:bg-brand-orange/10 border border-brand-orange/10"
                                 },
                                 {
                                     title: "Corporate Wellness",
                                     description: "Annual screenings, onsite health advice, and specialized checkup packages for corporate employees.",
                                     icon: Building2,
-                                    color: "bg-green-50 text-brand-green dark:bg-brand-green/10 border border-brand-green/10"
+                                    color: "bg-white dark:bg-brand-green/10 border border-brand-green/10"
                                 },
                                 {
                                     title: "Health Education",
                                     description: "Plain-language medical resources and awareness programs to empower patient decision-making.",
                                     icon: Presentation,
-                                    color: "bg-red-50 text-brand-red dark:bg-brand-red/10 border border-brand-red/10"
+                                    color: "bg-white dark:bg-brand-red/10 border border-brand-red/10"
                                 }
                             ].map((item, index) => (
-                                <div key={item.title} className="flex gap-6 items-start">
-                                    <div className={`shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-gray-200/50 dark:shadow-none ${item.color}`}>
+                                <motion.div
+                                    key={item.title}
+                                    whileHover={{ x: 10 }}
+                                    className="flex gap-6 items-start group cursor-default"
+                                >
+                                    <div className={`shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg shadow-gray-200/50 dark:shadow-none transition-all group-hover:scale-110 ${item.color}`}>
                                         <item.icon size={28} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-lg text-brand-teal dark:text-white mb-1 font-heading">{item.title}</h4>
+                                        <h4 className="font-bold text-lg text-brand-teal dark:text-white mb-1 font-heading group-hover:text-brand-orange transition-colors">{item.title}</h4>
                                         <p className="text-gray-500 dark:text-gray-400 leading-relaxed">{item.description}</p>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
                     </motion.div>

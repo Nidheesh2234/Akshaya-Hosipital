@@ -72,6 +72,8 @@ export default function FindDoctor() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
+                            whileHover={{ y: -5 }}
+                            whileTap={{ scale: 0.99 }}
                             className="bg-white dark:bg-white/5 p-8 rounded-[2.5rem] border border-brand-teal/5 dark:border-white/5 hover:border-brand-orange/20 hover:shadow-2xl hover:shadow-orange-500/5 transition-all group"
                         >
                             <div className="flex gap-6 mb-6">
@@ -96,7 +98,7 @@ export default function FindDoctor() {
                                 <span className="font-semibold">{doctor.location}</span>
                             </div>
 
-                            <button className="w-full py-4 bg-brand-orange/5 dark:bg-white/5 text-brand-orange dark:text-white border border-brand-orange/20 dark:border-white/10 rounded-2xl font-bold hover:bg-brand-orange hover:text-white hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all">
+                            <button className="w-full py-4 bg-brand-orange/5 dark:bg-white/5 text-brand-orange dark:text-white border border-brand-orange/20 dark:border-white/10 rounded-2xl font-bold hover:bg-brand-orange hover:text-white hover:shadow-lg hover:shadow-orange-500/20 active:scale-95 transition-all touch-response">
                                 View Profile
                             </button>
                         </motion.div>

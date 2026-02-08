@@ -7,7 +7,7 @@ export default function Hero() {
     return (
         <section className="relative min-height-[90vh] flex items-center pt-20 overflow-hidden">
             {/* Background Decor */}
-            <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-brand-orange/5 dark:from-brand-orange/10 to-transparent rounded-l-full blur-3xl" />
+            <div className="absolute top-0 right-0 -z-10 w-1/2 h-full bg-gradient-to-l from-brand-orange/2 dark:from-brand-orange/10 to-transparent rounded-l-full blur-3xl opacity-50" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -85,7 +85,8 @@ export default function Hero() {
                         <motion.div
                             animate={{ y: [0, -10, 0] }}
                             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-6 -right-6 z-20 bg-white dark:bg-[#001a18] p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 flex items-center gap-4"
+                            whileHover={{ scale: 1.1, rotate: 2 }}
+                            className="absolute -top-6 -right-6 z-20 bg-white dark:bg-[#001a18] p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 flex items-center gap-4 cursor-default"
                         >
                             <div className="bg-orange-100 dark:bg-orange-900/30 p-2 rounded-xl text-brand-orange">
                                 <Users size={24} />
@@ -100,7 +101,8 @@ export default function Hero() {
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                            className="absolute -bottom-10 -left-10 z-20 bg-white dark:bg-[#001a18] p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 flex items-center gap-4"
+                            whileHover={{ scale: 1.1, rotate: -2 }}
+                            className="absolute -bottom-10 -left-10 z-20 bg-white dark:bg-[#001a18] p-4 rounded-2xl shadow-xl border border-gray-100 dark:border-white/10 flex items-center gap-4 cursor-default"
                         >
                             <div className="bg-red-100 dark:bg-red-900/30 p-2 rounded-xl text-brand-red">
                                 <Calendar size={24} />
